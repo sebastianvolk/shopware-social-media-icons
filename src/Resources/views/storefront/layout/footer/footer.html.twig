@@ -90,9 +90,12 @@
         <div class="row">
             <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
                 <div class="d-flex justify-content-around">`;
-        for (let i = 0; i < availableSocialMediaLinks.length; i++) {
-            let prefix = "";
-            let suffix = "";
+        let i;
+        let prefix;
+        let suffix;
+        for (i = 0; i < availableSocialMediaLinks.length; i++) {
+            prefix = "";
+            suffix = "";
             if (i === 0) {
                 prefix = begin;
             }
