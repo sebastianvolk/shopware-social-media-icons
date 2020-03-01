@@ -18,7 +18,7 @@
     }
   },
   "extra": {
-    "shopware-plugin-class": "Shopware-social-media-icons\\Shopware-social-media-icons",
+    "shopware-plugin-class": "ShopwareSocialMediaIcons\\ShopwareSocialMediaIcons",
     "label": {
       "de-DE": "Shopware social media icons plugin",
       "en-GB": "Shopware social media icons plugin"
