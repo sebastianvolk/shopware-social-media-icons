@@ -81,9 +81,9 @@
                 <div class="d-flex justify-content-around">
         `;
 
-        for (let i = 0; i < availableSocialMediaLinks.lenght; i++) {
+        for (let i = 0; i < availableSocialMediaLinks.length; i++) {
             socialMediaContainer.innerHTML += availableSocialMediaLinks[i];
-            if (i % logosPerRow === 0) {
+            if ((i + 1) % logosPerRow === 0) {
                 socialMediaContainer.innerHTML += `
                         </div>
                     </div>
