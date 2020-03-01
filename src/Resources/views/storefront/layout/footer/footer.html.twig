@@ -74,6 +74,7 @@
         availableSocialMediaLinks.push(redditHtml);
     }
 
+    let html = "";
     if (availableSocialMediaLinks.length > 0) {
         const begin = `
         <div class="row">
@@ -104,8 +105,9 @@
             } else if ((i + 1) % logosPerRow === 0) {
                 suffix = middle; 
             }
-            socialMediaContainer.innerHTML += prefix + availableSocialMediaLinks[i] + suffix;            
+            html += prefix + availableSocialMediaLinks[i] + suffix;            
         }
     }
+    socialMediaContainer.innerHTML = html;
     </script>
 {% endblock %}
