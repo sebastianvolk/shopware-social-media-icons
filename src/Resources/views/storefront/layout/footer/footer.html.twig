@@ -75,31 +75,34 @@
     }
 
     if (availableSocialMediaLinks.length > 0) {
-        socialMediaContainer.innerHTML += `
+        const begin = `
         <div class="row">
             <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
                 <div class="d-flex justify-content-around">`;
-        console.log("Begin");
-
-        for (let i = 0; i < availableSocialMediaLinks.length; i++) {
-            socialMediaContainer.innerHTML += availableSocialMediaLinks[i];
-            console.log("Add", availableSocialMediaLinks[i]);
-            if ((i + 1) % logosPerRow === 0) {
-                socialMediaContainer.innerHTML += `
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
-                        <div class="d-flex justify-content-around">`;
-            }
-        }
-
-        socialMediaContainer.innerHTML += `
+        const end = `
                 </div>
             </div>
         </div>`;
-        console.log("End");
+        const middle = `
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
+                <div class="d-flex justify-content-around">`;
+        for (let i = 0; i < availableSocialMediaLinks.length; i++) {
+            let prefix = "";
+            let suffix = "";
+            if (i === 0) {
+                prefix = begin;
+            }
+            if ((i + 1) === availableSocialMediaLinks.length) {
+                suffix = end;
+            } else if ((i + 1) % logosPerRow === 0) {
+                suffix = middle; 
+            }
+            socialMediaContainer.innerHTML += prefix + availableSocialMediaLinks[i] + suffix;            
+        }
     }
     </script>
 {% endblock %}
