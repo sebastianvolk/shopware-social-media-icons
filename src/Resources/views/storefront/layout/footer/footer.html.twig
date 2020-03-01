@@ -78,11 +78,12 @@
         socialMediaContainer.innerHTML += `
         <div class="row">
             <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
-                <div class="d-flex justify-content-around">
-        `;
+                <div class="d-flex justify-content-around">`;
+        console.log("Begin");
 
         for (let i = 0; i < availableSocialMediaLinks.length; i++) {
             socialMediaContainer.innerHTML += availableSocialMediaLinks[i];
+            console.log("Add", availableSocialMediaLinks[i]);
             if ((i + 1) % logosPerRow === 0) {
                 socialMediaContainer.innerHTML += `
                         </div>
@@ -90,16 +91,15 @@
                 </div>
                 <div class="row">
                     <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
-                        <div class="d-flex justify-content-around">
-                `;
+                        <div class="d-flex justify-content-around">`;
             }
         }
 
         socialMediaContainer.innerHTML += `
                 </div>
             </div>
-        </div>
-        `;
+        </div>`;
+        console.log("End");
     }
     </script>
 {% endblock %}
