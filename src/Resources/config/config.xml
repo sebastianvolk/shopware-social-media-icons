@@ -3,9 +3,121 @@
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
 
     <card>
-        <title>Minimal configuration</title>
+        <title>Basic Configuration</title>
+        <title lang="de-DE">Grundeinstellungen</title>
+        <input-field type="int">
+            <name>logosPerRow</name>
+            <label>Logos per row</label>
+            <label lang="de-DE">Logos je Reihe</label>
+            <defaultValue>4</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Social media links</title>
+        <title lang="de-DE">Social Media Links</title>
+        <input-field type="bool">
+            <name>facebookEnabled</name>
+            <label>Enable facebook</label>
+            <label lang="de-DE">Facebook aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
         <input-field>
-            <name>example</name>
+            <name>facebookLink</name>
+            <label>Facebook link</label>
+            <label lang="de-DE">Facebook Link</label>
+            <placeholder>https://www.facebook.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>instagramEnabled</name>
+            <label>Enable instagram</label>
+            <label lang="de-DE">Instagram aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>instagramLink</name>
+            <label>Instagram link</label>
+            <label lang="de-DE">Instagram Link</label>
+            <placeholder>https://www.instagram.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>twitterEnabled</name>
+            <label>Enable twitter</label>
+            <label lang="de-DE">Twitter aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>twitterLink</name>
+            <label>Twitter link</label>
+            <label lang="de-DE">Twitter Link</label>
+            <placeholder>https://twitter.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>youtubeEnabled</name>
+            <label>Enable YouTube</label>
+            <label lang="de-DE">YouTube aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>youtubeLink</name>
+            <label>YouTube link</label>
+            <label lang="de-DE">YouTube Link</label>
+            <placeholder>https://www.youtube.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>snapchatEnabled</name>
+            <label>Enable snapchat</label>
+            <label lang="de-DE">Snapchat aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>snapchatLink</name>
+            <label>Snapchat link</label>
+            <label lang="de-DE">Snapchat Link</label>
+            <placeholder>https://www.snapchat.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>githubEnabled</name>
+            <label>Enable GitHub</label>
+            <label lang="de-DE">GitHub aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>githubLink</name>
+            <label>GitHub link</label>
+            <label lang="de-DE">GitHub Link</label>
+            <placeholder>https://github.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>spotifyEnabled</name>
+            <label>Enable spotify</label>
+            <label lang="de-DE">Spotify aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>spotifyLink</name>
+            <label>Spotify link</label>
+            <label lang="de-DE">Spotify Link</label>
+            <placeholder>https://open.spotify.com/...</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>redditEnabled</name>
+            <label>Enable reddit</label>
+            <label lang="de-DE">Reddit aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+        <input-field>
+            <name>redditLink</name>
+            <label>Reddit link</label>
+            <label lang="de-DE">Reddit Link</label>
+            <placeholder>https://www.reddit.com/...</placeholder>
         </input-field>
     </card>
 </config>

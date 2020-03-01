@@ -2,25 +2,104 @@
 
 {% block layout_footer_payment_shipping_logos %}
     {{ parent() }}
-    <div class="row">
-        <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
-            <div class="d-flex justify-content-around">
-                <img src="{{ asset('facebook.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('github.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('instagram.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('reddit.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <p>{{ shopware.config.ShopwareSocialMediaIcons.config.example }}<p>
+    <div class="footer-social-media-logos"></div>
+    <script>
+    const socialMediaContainer = document.querySelector(".footer-social-media-logos");
+    const logosPerRow = {{ shopware.config.ShopwareSocialMediaIcons.config.logosPerRow }};
+
+    const facebookHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.facebookLink }}">
+        <img src="{{ asset('facebook.svg', '@ShopwareSocialMediaIcons') }}" alt="Facebook Logo" style="height:3em;"/>
+    </a>
+    `;
+    const instagramHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.instagramLink }}">
+        <img src="{{ asset('instagram.svg', '@ShopwareSocialMediaIcons') }}" alt="Instagram Logo" style="height:3em;"/>
+    </a>
+    `;
+    const twitterHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.twitterLink }}">
+        <img src="{{ asset('twitter.svg', '@ShopwareSocialMediaIcons') }}" alt="Twitter Logo" style="height:3em;"/>
+    </a>
+    `;
+    const youtubeHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.youtubeLink }}">
+        <img src="{{ asset('youtube.svg', '@ShopwareSocialMediaIcons') }}" alt="YouTube Logo" style="height:3em;"/>
+    </a>
+    `;
+    const snapchatHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.snapchatLink }}">
+        <img src="{{ asset('snapchat.svg', '@ShopwareSocialMediaIcons') }}" alt="Snapchat Logo" style="height:3em;"/>
+    </a>
+    `;
+    const githubHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.githubLink }}">
+        <img src="{{ asset('github.svg', '@ShopwareSocialMediaIcons') }}" alt="GitHub Logo" style="height:3em;"/>
+    </a>
+    `;
+    const spotifyHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.spotifyLink }}">
+        <img src="{{ asset('spotify.svg', '@ShopwareSocialMediaIcons') }}" alt="Spotify Logo" style="height:3em;"/>
+    </a>
+    `;
+    const redditHtml = `
+    <a href="{{ shopware.config.ShopwareSocialMediaIcons.config.redditLink }}">
+        <img src="{{ asset('reddit.svg', '@ShopwareSocialMediaIcons') }}" alt="Reddit Logo" style="height:3em;"/>
+    </a>
+    `;
+
+    const availableSocialMediaLinks = [];
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.facebookEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.instagramEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.twitterEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.youtubeEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.snapchatEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.githubEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.spotifyEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+    if ({{ shopware.config.ShopwareSocialMediaIcons.config.redditEnabled }}) {
+        availableSocialMediaLinks.push(facebookHtml);
+    }
+
+    if (availableSocialMediaLinks.lenght > 0) {
+        socialMediaContainer.innerHTML += `
+        <div class="row">
+            <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
+                <div class="d-flex justify-content-around">
+        `;
+
+        for (let i = 0; i < availableSocialMediaLinks.lenght; i++) {
+            socialMediaContainer.innerHTML += availableSocialMediaLinks[i];
+            if (i % logosPerRow === 0) {
+                socialMediaContainer.innerHTML += `
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
+                        <div class="d-flex justify-content-around">
+                `;
+            }
+        }
+
+        socialMediaContainer.innerHTML += `
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="mx-auto my-3 col-md-8 col-lg-6 col-xl-4">
-            <div class="d-flex justify-content-around">
-                <img src="{{ asset('snapchat.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('spotify.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('twitter.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-                <img src="{{ asset('youtube.svg', '@ShopwareSocialMediaIcons') }}" alt="Logo" style="height:3em;"/>
-            </div>
-        </div>
-    </div>
+        `;
+    }
+    </script>
 {% endblock %}
