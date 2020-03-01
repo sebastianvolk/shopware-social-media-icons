@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace Shopware-social-media-icons;
+namespace ShopwareSocialMediaIcons;
 
 use Shopware\Core\Framework\Plugin;
 
-class Shopware-social-media-icons extends Plugin
+class ShopwareSocialMediaIcons extends Plugin
 {
 }
