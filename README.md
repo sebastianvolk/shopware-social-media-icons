@@ -1,0 +1,1 @@
+# Shopware social media icons
