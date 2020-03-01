@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Shopware-social-media-icons\\": "src/"
+      "ShopwareSocialMediaIcons\\": "src/"
     }
   },
   "extra": {
