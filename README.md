@@ -10,6 +10,8 @@ You can enable and disable each icon in the plugin settings.
 
 ![Screenshot_2020-03-01 Shopware administration](https://user-images.githubusercontent.com/45712972/75630570-2cc8fb80-5bec-11ea-9034-3e67723dda4b.png)
 
+You can download the zip file from the [releases](https://github.com/sebastianvolk/shopware-social-media-icons/releases/latest) and upload it in the shopware settings.
+
 ## Logos
 
 All logos were made by [Abhishek Pipalva](https://www.iconfinder.com/abhishekpipalva). [License](https://creativecommons.org/licenses/by-sa/3.0/)
